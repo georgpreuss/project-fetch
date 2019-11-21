@@ -1,11 +1,24 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import 'bulma'
 import './style.scss'
 
-// console.log(process.env.API_KEY)
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import Dogs from './components/Dogs'
+import SingleDog from './components/SingleDog'
 
 const App = () => (
-  <h1>hello</h1>
+  <BrowserRouter>
+    <Navbar />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/dogs" component={Dogs} />
+      <Route exact path="/dogs/:id" component={SingleDog} />
+    </Switch>
+  </BrowserRouter>
 )
 
 ReactDOM.render(

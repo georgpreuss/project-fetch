@@ -21,7 +21,8 @@ module.exports = {
     hot: true,
     open: true,
     port: 8000,
-    watchContentBase: true
+    watchContentBase: true,
+    historyApiFallback: true
   },
   plugins: [
     new Dotenv(),
