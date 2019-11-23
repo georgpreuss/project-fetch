@@ -13,7 +13,7 @@ const Navbar = () => (
             <Link className="navbar-item" to="/dogs">Browse Dogs</Link>
           </div>
           <div className="navbar-item">
-            <Link className="navbar-item" to="/dogs/fav">Favourites</Link>
+            <Link className="navbar-item" to="/dogs/favourites">Favourites</Link>
           </div>
           <div className="navbar-item">
             <Link className="navbar-item" to="/adopt">Adopt A Dog</Link>

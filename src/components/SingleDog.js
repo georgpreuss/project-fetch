@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
+
 class SingleDog extends React.Component {
   constructor() {
     super()
@@ -15,6 +16,15 @@ class SingleDog extends React.Component {
     axios.get(`https://api.thedogapi.com/v1/images/search?breed_id=${id}`)
       .then(resp => this.setState({ dog: resp.data }))
       .catch(err => this.setState({ err: err.response.status }))
+
+
+
+
+  }
+
+  addFavs() {
+    localStorage.setItem(this.state.dog[0].breeds[0].id, [this.state.dog[0].url, this.state.dog[0].breeds[0].name])
+    console.log({ ...localStorage })
   }
 
   render() {
@@ -22,7 +32,7 @@ class SingleDog extends React.Component {
     if (this.state.dog.length === 0) {
       return null
     }
-    console.log(this.state.dog[0].url)
+    // console.log(this.state.dog[0].url)
     return <div className="section">
       <div className="container">
         <div className="columns is-mobile is-multiline">
@@ -38,9 +48,13 @@ class SingleDog extends React.Component {
             <p>Breed group: {this.state.dog[0].breeds[0].breed_group}</p>
             <p>Life span: {this.state.dog[0].breeds[0].life_span}</p>
             <p>Temperament: {this.state.dog[0].breeds[0].temperament}</p>
+            <div className="button" onClick={() => this.addFavs()}>
+              fav doggo
+            </div>
           </div>
         </div>
       </div>
+     
     </div>
     // console.log('yo ', this.state.wine)
     // if (this.state.err === 404) {

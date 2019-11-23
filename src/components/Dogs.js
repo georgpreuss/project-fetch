@@ -22,7 +22,7 @@ class Dogs extends React.Component {
   //     })
   crazyLoop(dogs) {
     const allDogs = [...dogs]
-    for (let i = 1; i < 10; i++) {
+    for (let i = 1; i < allDogs.length; i++) {
       axios.get(`https://api.thedogapi.com/v1/images/search?breed_id=${i}`)
         .then(res => {
           allDogs.forEach((dog, index) => {
