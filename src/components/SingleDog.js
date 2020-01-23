@@ -42,14 +42,15 @@ class SingleDog extends React.Component {
           <div className="column is-half-tablet">
             <p className="title">{this.state.dog[0].breeds[0].name}</p>
             <p className="subtitle">Origin: {this.state.dog[0].breeds[0].origin}</p>
-            <p>Weight: {this.state.dog[0].breeds[0].weight.metric}</p>
-            <p>Height: {this.state.dog[0].breeds[0].height.metric}</p>
+            <p>Weight: {this.state.dog[0].breeds[0].weight.metric} kg</p>
+            <p>Height: {this.state.dog[0].breeds[0].height.metric} cm</p>
             <p>Bred for: {this.state.dog[0].breeds[0].bred_for}</p>
             <p>Breed group: {this.state.dog[0].breeds[0].breed_group}</p>
             <p>Life span: {this.state.dog[0].breeds[0].life_span}</p>
             <p>Temperament: {this.state.dog[0].breeds[0].temperament}</p>
-            <div className="button" onClick={() => this.addFavs()}>
-              fav doggo
+            <br />
+            <div className="button is-rounded" onClick={() => this.addFavs()}>
+              like
             </div>
           </div>
         </div>
