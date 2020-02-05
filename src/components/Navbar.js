@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
+import Logo from '../images/pawprint.png'
 
 class Navbar extends React.Component {
 
@@ -25,7 +26,7 @@ class Navbar extends React.Component {
       <div className="navbar is-fixed-top">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img id="image-logo" src="../images/pawprint.png" alt="logo"/>FETCH</Link>
+            <img id="image-logo" src={Logo} alt="logo"/>FETCH</Link>
           <a
             role="button"
             className={this.state.isOpen ? 'navbar-burger is-active' : 'navbar-burger'}
@@ -45,10 +46,10 @@ class Navbar extends React.Component {
             <div className="navbar-item">
               <Link className="navbar-item" to="/dogs/favourites">Favourites</Link>
             </div>
-            <div className="navbar-item">
+            {/* <div className="navbar-item">
               <Link className="navbar-item" to="/adopt">Adopt A Dog</Link>
-            </div>
-            <div className="navbar-item">
+            </div> */}
+            {/* <div className="navbar-item">
               <div className="field has-addons">
                 <div className="control">
                   <input className="input" type="text" placeholder="Search..."
@@ -60,7 +61,7 @@ class Navbar extends React.Component {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
