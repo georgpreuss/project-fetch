@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Home = () => (
+const Home = (props) => (
   <section className="hero is-fullheight bg-pan-top">
     <div className="hero-body">
       <div className="container tracking-in-expand-fwd-bottom">
-        <p className="title is-1 has-text-centered"><img id="image-hero" src="../images/pawprint.png" alt="logo"/>FETCH</p>
+        <p className="title is-1 has-text-centered"><img id="image-hero" src={props.logo} alt="logo"/>FETCH</p>
         <p className="subtitle is-3 has-text-centered">Browse and find your favourite dogs</p>
       </div>
     </div>

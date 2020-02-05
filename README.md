@@ -87,7 +87,7 @@ Coming soon
 ## Potential future features
 - A search function to look for dogs by name, breed, etc.
 - A more polished design
-- Adding an 'adopt a dog' feature, possibly using a different API to determine dogs up for adoption in your area
+- An 'adopt a dog' feature, possibly using a different API to determine dogs up for adoption in your area
 
 ## Lessons learned
 - Spend enough time understanding the structure of the API you are using so you don't run into similar issues

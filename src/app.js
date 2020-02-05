@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Logo from './images/pawprint.png'
+
 
 import 'bulma'
 import './style.scss'
@@ -13,9 +15,9 @@ import FavouriteDogs from './components/Favourites'
 
 const App = () => (
   <BrowserRouter basename="/project-fetch">
-    <Navbar />
+    <Navbar logo={Logo}/>
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={Home} logo={Logo} />
       <Route exact path="/dogs" component={Dogs} />
       <Route exact path="/dogs/favourites" component={FavouriteDogs} />
       <Route exact path="/dogs/:id" component={SingleDog} />

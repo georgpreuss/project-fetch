@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import Logo from '../images/pawprint.png'
 
 class Navbar extends React.Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       isOpen: false
     }
@@ -26,7 +25,7 @@ class Navbar extends React.Component {
       <div className="navbar is-fixed-top">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img id="image-logo" src={Logo} alt="logo"/>FETCH</Link>
+            <img id="image-logo" src={this.props.logo} alt="logo"/>FETCH</Link>
           <a
             role="button"
             className={this.state.isOpen ? 'navbar-burger is-active' : 'navbar-burger'}
@@ -46,22 +45,6 @@ class Navbar extends React.Component {
             <div className="navbar-item">
               <Link className="navbar-item" to="/dogs/favourites">Favourites</Link>
             </div>
-            {/* <div className="navbar-item">
-              <Link className="navbar-item" to="/adopt">Adopt A Dog</Link>
-            </div> */}
-            {/* <div className="navbar-item">
-              <div className="field has-addons">
-                <div className="control">
-                  <input className="input" type="text" placeholder="Search..."
-                  ></input>
-                </div>
-                <div className="control">
-                  <a className="button is-info">
-                    Search
-                  </a>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
