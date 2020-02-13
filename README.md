@@ -77,7 +77,8 @@ fetchImages(dogs) {
 - This unfortunately had to be limited as a precaution in order not to exceed any API call limitation
 
 ## Screenshots
-Coming soon
+![Landing page](./docs/LandingPage.png)
+![Dog info](./docs/DogInfo.png)
 
 ## Bugs
 - Not really a bug, but a limitation we wish we had known at the start:
